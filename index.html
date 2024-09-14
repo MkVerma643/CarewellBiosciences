@@ -890,7 +890,6 @@
       id="jquery-blockui-js"
     ></script>
     <script type="text/javascript" id="wc-add-to-cart-js-extra"></script>
-
     <script
       type="text/javascript"
       src="./scripts/add-to-cart.min.js"
@@ -958,7 +957,7 @@
       /*Logo height*/
       .mkdf-logo-wrapper a img {
         height: 80% !important;
-        margin-top: -0px !important;
+        margin-top: 0px !important;
       }
 
       /*footer credits*/
@@ -1485,6 +1484,13 @@
         border-bottom: 1px solid #ddd;
       }
     </style>
+    <noscript>
+      <style>
+        .wpb_animate_when_almost_visible {
+          opacity: 1;
+        }
+      </style>
+    </noscript>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
@@ -1572,8 +1578,8 @@
           </div>
         </div>
 
-        <header class="mkdf-page-header" style="margin-bottom: 90px">
-          <div class="mkdf-fixed-wrapper fixed">
+        <header class="mkdf-page-header">
+          <div class="mkdf-fixed-wrapper">
             <div class="mkdf-menu-area mkdf-menu-right">
               <div class="mkdf-vertical-align-containers">
                 <div class="mkdf-position-left">
@@ -1824,7 +1830,7 @@
           </div>
         </header>
 
-        <a id="mkdf-back-to-top" href="#mkdf-top-bar" class="off">
+        <a id="mkdf-back-to-top" href="#" class="off">
           <svg
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
