@@ -50,6 +50,11 @@
       type="text/css"
       media="all"
     />
+
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
     <style id="classic-theme-styles-inline-css" type="text/css">
       .wp-block-button__link {
         color: #fff;
@@ -1483,6 +1488,69 @@
         padding: 20px;
         border-bottom: 1px solid #ddd;
       }
+
+      /* Phone and Email section responsive adjustments */
+      @media (max-width: 1020px) {
+        .mkdf-top-bar {
+          display: block;
+          padding: 10px 15px;
+          /* background-color: #f8f8f8; */
+        }
+
+        /* Ensure the phone and email text is visible and responsive */
+        .mkdf-top-bar-widget .textwidget {
+          text-align: center;
+          font-size: 14px; /* Adjust the font size for smaller screens */
+        }
+
+        .mkdf-top-bar-widget a {
+          display: inline-block;
+          font-size: 14px;
+          color: #333;
+          margin-right: 10px;
+        }
+
+        .mkdf-top-bar-widget svg {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      /* Show hamburger menu icon on smaller screens */
+      @media (max-width: 1020px) {
+        .mkdf-page-header {
+          display: none; /* Hide the desktop header */
+        }
+
+        .mkdf-mobile-header {
+          display: block; /* Show mobile header */
+          background-color: #fff;
+          padding: 10px;
+        }
+
+        /* Ensure the mobile menu opener (hamburger icon) is visible */
+        .mkdf-mobile-menu-opener {
+          display: block;
+          font-size: 24px;
+          cursor: pointer;
+        }
+
+        /* Mobile navigation adjustments */
+        .mkdf-mobile-nav {
+          display: none;
+          background-color: #fff;
+          position: absolute;
+          width: 100%;
+          left: 0;
+          top: 100%;
+          z-index: 9999;
+        }
+
+        .mkdf-mobile-nav.open {
+          display: block; /* Show menu when opened */
+        }
+      }
     </style>
     <noscript>
       <style>
@@ -1710,9 +1778,10 @@
         </header>
 
         <header
-          class="mkdf-mobile-header mkdf-animate-mobile-header"
+          class="mkdf-mobile-header"
           style="margin-bottom: 0px"
         >
+        <!-- mkdf-animate-mobile-header -->
           <div class="mkdf-mobile-header-inner">
             <div class="mkdf-mobile-header-holder">
               <div class="mkdf-vertical-align-containers">
@@ -1725,7 +1794,7 @@
                         <a
                           itemprop="url"
                           href="https://carewellbiosciences.com/"
-                          style="height: 96px"
+                          style="height: 90px"
                         >
                           <img
                             itemprop="image"
@@ -1749,9 +1818,9 @@
                           <span class="mkdf-mobile-menu-icon">
                             <span
                               aria-hidden="true"
-                              class="mkdf-icon-font-elegant icon_menu"
+                              class="fas fa-bars"
                             ></span>
-                          </span>
+                          </span>                          
                         </a>
                       </div>
                     </div>
@@ -2685,6 +2754,15 @@
           const mobileNav = document.querySelector(".mkdf-mobile-nav");
           mobileNav.classList.toggle("open");
         });
+
+      document
+        .querySelector(".mkdf-mobile-menu-opener")
+        .addEventListener("click", function () {
+          const mobileNav = document.querySelector(".mkdf-mobile-nav");
+          mobileNav.classList.toggle("open"); // Toggle the open class
+        });
     </script>
+
+
   </body>
 </html>
