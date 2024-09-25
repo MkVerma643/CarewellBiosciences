@@ -482,10 +482,10 @@
       type="text/css"
       media="all"
     />
-	<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style id="woocommerce-inline-inline-css" type="text/css">
       .woocommerce form .form-row .required {
         visibility: visible;
@@ -1141,7 +1141,7 @@
                             ></a
                           >
                         </li>
-                        <li
+                        <!-- <li
                           id="nav-menu-item-864"
                           class="menu-item menu-item-type-post_type menu-item-object-page narrow"
                         >
@@ -1166,7 +1166,7 @@
                                   class="wpmi-icon wpmi-label-1 wpmi-position-before wpmi-align-middle wpmi-size-1 dashicons dashicons-cart"
                                 ></i></span></span
                           ></a>
-                        </li>
+                        </li> -->
                       </ul>
                     </nav>
                   </div>
@@ -1210,12 +1210,9 @@
                         class="mkdf-mobile-menu-opener mkdf-mobile-menu-opener-icon-pack"
                       >
                         <a href="./javascript:void(0).html">
-							<span class="mkdf-mobile-menu-icon">
-								<span
-								  aria-hidden="true"
-								  class="fas fa-bars"
-								></span>
-							  </span>  
+                          <span class="mkdf-mobile-menu-icon">
+                            <span aria-hidden="true" class="fas fa-bars"></span>
+                          </span>
                         </a>
                       </div>
                     </div>
@@ -1346,13 +1343,14 @@
                                 data-formid="34"
                                 method="post"
                                 enctype="multipart/form-data"
-                                action="/our-services/?wpforms_form_id=34"
+                                action="sendmail.php"
                               >
-                                <noscript class="wpforms-error-noscript"
-                                  >Please enable JavaScript in your browser to
-                                  complete this form.</noscript
-                                >
+                                <noscript class="wpforms-error-noscript">
+                                  Please enable JavaScript in your browser to
+                                  complete this form.
+                                </noscript>
                                 <div class="wpforms-field-container">
+                                  <!-- Name Field -->
                                   <div
                                     id="wpforms-34-field_1-container"
                                     class="wpforms-field wpforms-field-name"
@@ -1361,30 +1359,13 @@
                                     <label
                                       class="wpforms-field-label"
                                       for="wpforms-34-field_1"
-                                      >Name
+                                    >
+                                      Full Name
                                       <span class="wpforms-required-label"
                                         >*</span
-                                      ></label
-                                    >
-                                    <div
-                                      class="wpforms-field-row wpforms-field-medium"
-                                    >
-                                      <div
-                                        class="wpforms-field-row-block wpforms-first wpforms-one-half"
                                       >
-                                        <input
-                                          type="text"
-                                          id="wpforms-34-field_1"
-                                          class="wpforms-field-name-first wpforms-field-required"
-                                          name="wpforms[fields][1][first]"
-                                          required
-                                        /><label
-                                          for="wpforms-34-field_1"
-                                          class="wpforms-field-sublabel after"
-                                          >First</label
-                                        >
-                                      </div>
-                                      <div
+                                    </label>
+                                    <div
                                         class="wpforms-field-row-block wpforms-one-half"
                                       >
                                         <input
@@ -1393,12 +1374,39 @@
                                           class="wpforms-field-name-last wpforms-field-required"
                                           name="wpforms[fields][1][last]"
                                           required
-                                        /><label
+                                          aria-label="Last Name"
+                                        />
+                                        <label
                                           for="wpforms-34-field_1-last"
                                           class="wpforms-field-sublabel after"
-                                          >Last</label
                                         >
+                                          Email Id<span class="wpforms-required-label"
+                                          >*</span
+                                        </label>
                                       </div>
+                                    <div
+                                      class="wpforms-field-row wpforms-field-medium"
+                                    >
+                                      <div
+                                        class="wpforms-field-row-block wpforms-first wpforms-one-half"
+                                      >
+                                        <input
+                                        type="email"
+                                        id="wpforms-34-field_2"
+                                        class="wpforms-field-medium wpforms-field-required"
+                                        name="wpforms[fields][2]"
+                                        required
+                                        aria-label="Email"
+                                        />
+                                        <label
+                                          for="wpforms-34-field_1"
+                                          class="wpforms-field-sublabel after"
+                                        >
+                                          Inquiry / Comment<span class="wpforms-required-label"
+                                          >*</span
+                                        </label>
+                                      </div>
+                                      
                                     </div>
                                   </div>
                                   <div
@@ -1409,16 +1417,15 @@
                                     <label
                                       class="wpforms-field-label"
                                       for="wpforms-34-field_2"
-                                      >Email
-                                      <span class="wpforms-required-label"
-                                        >*</span
-                                      ></label
-                                    ><input
-                                      type="email"
+                                    >
+                                    </label>
+                                    <input
+                                      type="text"
                                       id="wpforms-34-field_2"
                                       class="wpforms-field-medium wpforms-field-required"
                                       name="wpforms[fields][2]"
                                       required
+                                      aria-label="Inquiry"
                                     />
                                   </div>
                                   <div
@@ -1430,28 +1437,15 @@
                                       class="wpforms-field-label"
                                       for="wpforms-34-field_3"
                                       >Mobile No.</label
-                                    ><input
-                                      type="number"
-                                      pattern="\d*"
-                                      id="wpforms-34-field_3"
-                                      class="wpforms-field-medium"
-                                      name="wpforms[fields][3]"
-                                    />
-                                  </div>
-                                  <div
-                                    id="wpforms-34-field_4-container"
-                                    class="wpforms-field wpforms-field-text"
-                                    data-field-id="4"
-                                  >
-                                    <label
-                                      class="wpforms-field-label"
-                                      for="wpforms-34-field_4"
-                                      >Address</label
-                                    ><input
-                                      type="text"
-                                      id="wpforms-34-field_4"
-                                      class="wpforms-field-medium"
-                                      name="wpforms[fields][4]"
+                                    >
+                                    <input
+                                    type="text"
+                                      id="wpforms-34-field_2"
+                                      class="wpforms-field-medium wpforms-field-required"
+                                      name="wpforms[fields][2]" required
+                                      pattern="[0-9]{10}"
+                                      aria-label="Mobile Number"
+                                      title="Enter a valid 10-digit mobile number"
                                     />
                                   </div>
                                   <div
@@ -1463,90 +1457,35 @@
                                       class="wpforms-field-label"
                                       for="wpforms-34-field_5"
                                       >City</label
-                                    ><input
+                                    >
+                                    <input
                                       type="text"
                                       id="wpforms-34-field_5"
                                       class="wpforms-field-medium"
+                                      required
                                       name="wpforms[fields][5]"
-                                    />
-                                  </div>
-                                  <div
-                                    id="wpforms-34-field_6-container"
-                                    class="wpforms-field wpforms-field-text"
-                                    data-field-id="6"
-                                  >
-                                    <label
-                                      class="wpforms-field-label"
-                                      for="wpforms-34-field_6"
-                                      >Pincode</label
-                                    ><input
-                                      type="text"
-                                      id="wpforms-34-field_6"
-                                      class="wpforms-field-medium"
-                                      name="wpforms[fields][6]"
-                                    />
-                                  </div>
-                                  <div
-                                    id="wpforms-34-field_7-container"
-                                    class="wpforms-field wpforms-field-text"
-                                    data-field-id="7"
-                                  >
-                                    <label
-                                      class="wpforms-field-label"
-                                      for="wpforms-34-field_7"
-                                      >Qualification</label
-                                    ><input
-                                      type="text"
-                                      id="wpforms-34-field_7"
-                                      class="wpforms-field-medium"
-                                      name="wpforms[fields][7]"
-                                    />
-                                  </div>
-                                  <div
-                                    id="wpforms-34-field_8-container"
-                                    class="wpforms-field wpforms-field-file-upload"
-                                    data-field-id="8"
-                                  >
-                                    <label
-                                      class="wpforms-field-label"
-                                      for="wpforms-34-field_8"
-                                      >Upload Resume</label
-                                    ><input
-                                      type="file"
-                                      id="wpforms-34-field_8"
-                                      data-rule-extension="jpg,jpeg,jpe,gif,png,bmp,tiff,tif,webp,avif,ico,heic,asf,asx,wmv,wmx,wm,avi,divx,mov,qt,mpeg,mpg,mpe,mp4,m4v,ogv,webm,mkv,3gp,3gpp,3g2,3gp2,txt,asc,c,cc,h,srt,csv,tsv,ics,rtx,css,vtt,mp3,m4a,m4b,aac,ra,ram,wav,ogg,oga,flac,mid,midi,wma,wax,mka,rtf,pdf,class,tar,zip,gz,gzip,rar,7z,psd,xcf,doc,pot,pps,ppt,wri,xla,xls,xlt,xlw,mpp,docx,docm,dotx,dotm,xlsx,xlsm,xlsb,xltx,xltm,xlam,pptx,pptm,ppsx,ppsm,potx,potm,ppam,sldx,sldm,onetoc,onetoc2,onepkg,oxps,xps,odt,odp,ods,odg,odc,odb,odf,wp,wpd,key,numbers,pages"
-                                      data-rule-maxsize="12884901888"
-                                      name="wpforms_34_8"
-                                      accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.webp,.avif,.ico,.heic,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.vtt,.mp3,.m4a,.m4b,.aac,.ra,.ram,.wav,.ogg,.oga,.flac,.mid,.midi,.wma,.wax,.mka,.rtf,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages"
+                                      aria-label="City"
                                     />
                                   </div>
                                 </div>
-                                <div class="wpforms-field wpforms-field-hp">
-                                  <label
-                                    for="wpforms-34-field-hp"
-                                    class="wpforms-field-label"
-                                    >Name</label
-                                  ><input
-                                    type="text"
-                                    name="wpforms[hp]"
-                                    id="wpforms-34-field-hp"
-                                    class="wpforms-field-medium"
-                                  />
-                                </div>
+                                <!-- Submit Button -->
                                 <div class="wpforms-submit-container">
                                   <input
                                     type="hidden"
                                     name="wpforms[id]"
                                     value="34"
-                                  /><input
+                                  />
+                                  <input
                                     type="hidden"
                                     name="wpforms[author]"
                                     value="1"
-                                  /><input
+                                  />
+                                  <input
                                     type="hidden"
                                     name="wpforms[post_id]"
                                     value="68"
-                                  /><button
+                                  />
+                                  <button
                                     type="submit"
                                     name="wpforms[submit]"
                                     class="wpforms-submit"
@@ -1561,10 +1500,10 @@
                                 </div>
                               </form>
                             </div>
-                            <!-- .wpforms-container -->
                           </div>
                         </div>
                       </div>
+
                       <div class="wpb_column vc_column_container vc_col-sm-6">
                         <div class="vc_column-inner">
                           <div class="wpb_wrapper">
@@ -1577,7 +1516,7 @@
                               <div class="wpb_wrapper">
                                 <div class="wpb_map_wraper">
                                   <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d395.8998312562155!2d73.1441282112353!3d19.26256240797667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7968fabf3a229%3A0x536df7b96f73be8!2sWadhwa%20Heights%20Shiv%20Leela%2C%20Godrej%20Hill%2C%20Khadakpada%2C%20Kalyan%2C%20Maharashtra%20421301!5e0!3m2!1sen!2sin!4v1623935978046!5m2!1sen!2sin"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d395.8998312562155!2d73.1441282112353!3d19.26256240797667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7968fabf3a229%3A0x536df7b96f73be8!2%20Shree%20Samarath%2C%20Apartment%20Hill%2C%20CHINCHPADA%2C%20Kalyan%2C%20Maharashtra%20421301!5e0!3m2!1sen!2sin!4v1623935978046!5m2!1sen!2sin"
                                     width="600"
                                     height="450"
                                     style="border: 0"
