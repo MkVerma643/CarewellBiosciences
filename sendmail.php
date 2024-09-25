@@ -16,7 +16,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';                       // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'carewellbioscience@gmail.com';                  // SMTP username
-    $mail->Password   = 'bioscience@carewell.643';                       // SMTP username (Your Gmail)
+    $mail->Password   = '';                       // SMTP username (Your Gmail)
 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption
     $mail->Port       = 587;                                    // TCP port to connect to (TLS)
